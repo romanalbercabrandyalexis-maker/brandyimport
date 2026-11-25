@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Tienda</title>
+<title>Decorativos y + | Importaciones Román Brandy</title>
+<meta name="description" content="Catálogo de piñatería y decoraciones de Importaciones Román Brandy. Venta al por mayor y menor en Perú.">
+<link rel="preconnect" href="https://firestore.googleapis.com">
+<link rel="preconnect" href="https://www.gstatic.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
   :root{
     --surface: rgba(255, 255, 255, 0.85);
@@ -129,25 +131,6 @@
     display:flex; flex-direction:column; align-items:center;
   }
   
-  .cover-wrap{
-    width:100%; max-width:100%; border-radius:0 0 26px 26px; overflow:hidden;
-    box-shadow:0 14px 34px rgba(0,0,0,0.35); position:relative;
-    display:flex; flex-direction:column; background:rgba(0,0,0,0.15);
-    flex: none;
-  }
-  .cover{
-    width:100%; aspect-ratio:4/1; max-height:190px; background-size:cover; background-position:center;
-    background-image:linear-gradient(120deg,#4C5FD5 0%,#E23FA0 55%,#FF9130 100%);
-    position:relative;
-  }
-  
-  .edit-mode .cover{cursor:pointer;}
-  .cover-hint{
-    position:absolute; inset:0; display:none; align-items:center; justify-content:center;
-    background:rgba(33,26,44,0.35); color:#fff; font-weight:600; font-size:0.9rem;
-  }
-  .edit-mode .cover:hover .cover-hint{display:flex;}
-
   .brand-col{ 
     width:100%; max-width:1080px; display:flex; flex-direction:row; align-items:center;
     justify-content:flex-start; gap:16px; padding:20px 24px 4px; margin-top:0; z-index:10; flex:none;
@@ -646,7 +629,7 @@
   .gallery-strip{
     display:flex; overflow-x:auto; gap:8px; padding:10px 10px 4px; -webkit-overflow-scrolling:touch;
   }
-  .cover-gallery{max-width:640px; margin:0 auto; padding:10px 16px 4px;}
+
   .thumb{
     position:relative; width:56px; height:48px; flex-shrink:0; border-radius:9px; background:rgba(0,0,0,0.04);
     background-size:cover; background-position:center; overflow:hidden;
@@ -780,14 +763,6 @@
   .card-slide{background-color:rgba(33,26,44,0.05);}
   .media-placeholder{color:var(--ink-soft);}
 
-  /* ===== BANNER (portada pequeña) ===== */
-  @media (min-width:900px){
-    .cover-wrap{max-width:1080px; margin-top:14px; border-radius:18px;}
-  }
-  @media (max-width:640px){
-    .cover{aspect-ratio:16/5; max-height:130px;}
-  }
-
   /* ===== FLECHAS DE FOTOS EN TARJETAS ===== */
   .card-arrow{
     position:absolute; top:50%; transform:translateY(-50%);
@@ -890,15 +865,138 @@
   .fs-ico{font-size:1.1rem; line-height:1;}
   @media (min-width:900px){ .fs-btn{display:flex;} }
   @media (min-width:1200px){
-    .identity, .cover-wrap, .hero-top, .gallery-wrap{max-width:1360px;}
+    .identity, .hero-top, .gallery-wrap{max-width:1360px;}
   }
   @media (min-width:1600px){
-    .identity, .cover-wrap, .hero-top{max-width:1560px;}
+    .identity, .hero-top{max-width:1560px;}
   }
+
+/* ===== REDISEÑO ROMÁN IMPORT · 2026 ===== */
+:root{--ink:#14243d;--ink-soft:#53627a;--tech:#0b77d8;--salud:#00a99a;--juguetes:#ff9b2f;--ropa:#f34c91;--surface:#fff;--radius:18px;--shadow:0 10px 28px rgba(13,35,68,.09)}
+body{background:#f5f8fc;color:var(--ink)}
+.bg-blobs{display:none}
+.store-announcement{background:#0c2344;color:#fff;text-align:center;padding:9px 16px;font-size:.8rem;font-weight:700;letter-spacing:.025em}
+.store-topbar{background:#fff;border-bottom:1px solid #e6edf6;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px max(24px,calc((100vw - 1360px)/2));position:relative;z-index:3}
+.store-mark{display:flex;align-items:center;gap:12px;min-width:0}.store-mark-symbol{background:linear-gradient(135deg,#0b77d8,#00b9a5);color:#fff;width:45px;height:45px;border-radius:14px;display:grid;place-items:center;font-size:1.35rem;box-shadow:0 7px 15px rgba(0,130,205,.2)}
+.store-mark strong{display:block;font-family:'Baloo 2',sans-serif;font-size:1.3rem;line-height:1.1}.store-mark small{display:block;color:#687993;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.store-toplinks{display:flex;gap:18px;align-items:center;font-size:.84rem;font-weight:700}.store-toplinks a:hover{color:#087ecf}.store-toplinks .top-cta{background:#0d274b;color:#fff;border-radius:999px;padding:10px 17px}
+.store-hero-banner{max-width:1360px;margin:22px auto 12px;padding:35px 42px;min-height:210px;border-radius:24px;background:radial-gradient(circle at 82% 28%,rgba(255,255,255,.18),transparent 30%),linear-gradient(110deg,#092a52 0%,#0876b7 55%,#00aaac 100%);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden;position:relative}
+
+.store-hero-copy{position:relative;z-index:1;max-width:620px}.store-eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 13px;font-size:.74rem;font-weight:800;letter-spacing:.1em}.store-hero-copy h2{font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.05;margin:12px 0 9px}.store-hero-copy p{font-size:1rem;line-height:1.5;opacity:.94;margin:0 0 18px}.store-hero-copy a{display:inline-flex;background:#ffb13d;color:#172b46;border-radius:12px;padding:12px 20px;font-weight:800;box-shadow:0 6px 0 rgba(0,0,0,.1)}
+.store-benefits{max-width:1360px;margin:0 auto 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.store-benefit{background:#fff;border:1px solid #e8eef7;border-radius:15px;padding:15px 18px;font-size:.86rem;font-weight:700;color:#233b59;display:flex;gap:10px;align-items:center}.store-benefit span{font-size:1.35rem}
+
+.brand-col{padding-top:18px}.profile{box-shadow:0 4px 14px rgba(10,42,78,.12);background-color:#0b3867}.biz-name{background:none;color:#14243d;text-shadow:none;animation:none;font-size:1.8rem}.tagline{color:#607089}.hours{color:#53627a}
+.stripe{height:5px;margin:18px 0 24px;background:linear-gradient(90deg,#0878d5,#00b7a5,#ffb23e,#f34c91)}
+.sticky-nav{background:rgba(245,248,252,.97);border-bottom:1px solid #e7eef8;box-shadow:0 10px 18px -16px rgba(13,35,68,.3)}.search-wrap{border:1px solid #dce6f2;box-shadow:0 3px 10px rgba(12,34,66,.04);border-radius:14px;padding:14px 17px}.search-input{font-size:1rem}
+.cat-btn{border-radius:16px;border:1px solid #e5ecf5;box-shadow:0 4px 12px rgba(15,35,60,.04)}.cat-btn.active{border-color:#0b8fd1;box-shadow:0 0 0 2px rgba(0,164,184,.16)}.cat-btn.active .cat-label{color:#0877bb}.cat-btn.pill-novedades{background:#fff0d6;border-color:#ffd78a;animation:none}.cat-btn.pill-novedades.active{background:#ffb23e;border-color:#ffb23e;box-shadow:0 3px 12px rgba(255,178,62,.2)}
+.section-head h2{font-size:1.65rem}.dot{background:linear-gradient(135deg,#0b77d8,#00b9a5)}
+.card.glass{border:1px solid #e5ebf3;border-top:4px solid #0b77d8;border-radius:18px;box-shadow:0 7px 22px rgba(15,36,65,.065);transition:transform .2s,box-shadow .2s}.card.glass:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(15,36,65,.12)}.card-slide{background-color:#f1f5fa}.card-title{color:#172b45;font-size:1.03rem}.card-price{color:#008b61;font-size:1.2rem}.card-desc{color:#65738a}.wa-btn{border-radius:11px;background:#13b66a;box-shadow:none}.cart-btn{background:#12365e;border-radius:11px}.cart-fab{background:#0c2d53;box-shadow:0 10px 30px rgba(12,45,83,.3)}
+footer{padding:30px 10px;border-top:1px solid #e3eaf3;color:#667790}.social-icon{background:#0b3969}
+@media(max-width:900px){.store-topbar{padding:12px 16px}.store-hero-banner,.store-benefits{margin-left:16px;margin-right:16px}.store-hero-banner{padding:30px 25px}}
+@media(max-width:640px){.store-toplinks a:not(.top-cta){display:none}.store-toplinks .top-cta{font-size:.72rem;padding:9px 11px}.store-mark strong{font-size:1rem}.store-mark small{font-size:.59rem}.store-mark-symbol{width:39px;height:39px}.store-hero-banner{min-height:235px;padding:24px 20px;border-radius:18px}.store-hero-copy h2{font-size:2rem;max-width:310px}.store-hero-copy p{font-size:.85rem;max-width:280px}.store-benefits{grid-template-columns:1fr;gap:7px}.store-benefit{padding:10px 13px;font-size:.8rem}.store-benefit span{font-size:1rem}.biz-name{font-size:1.35rem}.card.glass:hover{transform:none}.store-announcement{font-size:.7rem}}
+
+
+/* ===== EDICIÓN PREMIUM 2026 · B' ROMÁN IMPORT ===== */
+:root{--ink:#15263d;--ink-soft:#64748b;--surface:#fff;--radius:18px;--shadow:0 12px 36px rgba(20,38,61,.07)}
+body{background:#f7f8fb;color:#15263d}
+.store-announcement{background:#102c4a;letter-spacing:.06em}
+.store-topbar{box-shadow:0 2px 18px rgba(15,34,60,.035)}
+.store-mark-symbol{background:#142f50;border-radius:12px;box-shadow:none}
+.store-toplinks .top-cta{background:#e86a37;color:#fff}
+.store-hero-banner{margin-top:25px;margin-bottom:22px;min-height:270px;border-radius:22px;background:radial-gradient(circle at 83% 15%,rgba(255,255,255,.13),transparent 32%),linear-gradient(115deg,#112f51,#174f74 65%,#137b86);box-shadow:0 18px 35px rgba(20,49,75,.12)}
+
+.store-hero-copy h2{font-family:'Baloo 2',sans-serif;letter-spacing:-.025em;max-width:570px}
+.store-hero-copy a{background:#f9bd63;color:#15263d;box-shadow:none}
+.store-benefits{margin-bottom:26px;gap:15px}
+.store-benefit{border-radius:14px;border:1px solid #e8edf2;box-shadow:0 3px 12px rgba(20,38,61,.025);padding:17px 19px}
+
+
+.brand-col{max-width:1360px;width:calc(100% - 32px);margin:18px auto 0;background:#fff;border:1px solid #e8edf3;border-radius:20px;padding:22px 28px;gap:25px;box-shadow:0 6px 22px rgba(20,38,61,.04);align-items:center}
+.profile-wrap{gap:12px}.profile-ring{width:150px!important;height:150px!important;border-radius:22px!important}
+.profile{width:100%!important;height:100%!important;border-radius:22px!important;background-size:contain;background-color:#f2f6fb;box-shadow:none;border:1px solid #e5eaf2}
+.profile-fallback{color:#153456}.brand-text{gap:4px}.biz-name{font-size:clamp(1.55rem,2.6vw,2.25rem);font-weight:800;letter-spacing:-.025em}
+.tagline{font-size:.98rem;max-width:680px;line-height:1.6}.hours{font-size:.84rem;color:#67758a}
+.social-row{gap:7px}.social-icon{width:34px;height:34px;background:#edf4fa;border:1px solid #e2eaf3;color:#183b61}.social-icon svg{width:17px;height:17px}.social-icon:hover{background:#dcebf8}
+.stripe{display:none}.identity{padding-top:26px}
+.sticky-nav{border:1px solid #e8edf4;border-radius:18px;padding:16px 18px;margin:0 0 28px;background:rgba(255,255,255,.97);box-shadow:0 6px 22px rgba(20,38,61,.04)}
+.search-wrap{background:#f7f9fc;border:1px solid #e4eaf1;box-shadow:none;border-radius:12px;padding:13px 16px;margin-bottom:17px}
+.cat-bar{gap:10px;padding:3px 2px 7px}.cat-btn{min-width:106px;gap:9px;border-radius:13px;padding:12px 15px;background:#fff;border:1px solid #e5ebf2;box-shadow:none;transition:background .2s,border-color .2s,transform .2s}
+.cat-btn .cat-icon{height:54px;min-width:54px;border-radius:14px;font-size:1.8rem}.cat-btn .cat-icon.has-img{width:54px}
+.cat-btn .cat-label{font-family:'Work Sans',sans-serif;font-size:.75rem;letter-spacing:0;font-weight:700;color:#33445c}
+.cat-btn.active{border-color:#e68b63;background:#fff8f4;box-shadow:none}.cat-btn.active .cat-label{color:#b24c24}.cat-btn.active .cat-icon.has-img{box-shadow:none}
+.cat-btn.pill-novedades{background:#fff6eb;border-color:#f7dfbf}.cat-btn.pill-novedades.active{background:#f7dfbf;border-color:#e6b87b}
+.section-head{margin-bottom:20px}.section-head h2{font-size:1.8rem;letter-spacing:-.02em}.dot{width:7px;height:26px;border-radius:8px;background:#e77943}
+.grid{gap:20px}.card.glass{border:1px solid #e5eaf1;border-top:1px solid #e5eaf1;border-radius:16px;box-shadow:0 5px 18px rgba(20,38,61,.045)}.card.glass:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(20,38,61,.1)}
+.card-slide{background:#f7f8fa}.card-body{padding:16px;gap:8px}.card-title{font-family:'Work Sans',sans-serif;font-size:1rem;font-weight:700;line-height:1.4}.card-desc{line-height:1.45;color:#68758a}.card-price{color:#0c7c60;font-size:1.25rem}.wa-btn{padding:11px;background:#168a5a;border-radius:10px}.cart-btn{padding:11px;background:#183957;border-radius:10px}.tag{border-radius:6px}
+.cart-fab{width:62px;height:62px;background:#173b59;animation:none}
+footer{margin-top:20px}
+@media(min-width:900px){.grid[data-size="m"]{grid-template-columns:repeat(auto-fill,minmax(245px,1fr))}}
+@media(max-width:640px){.store-hero-banner{min-height:245px;margin-top:12px;margin-bottom:14px}.store-benefits{margin-bottom:16px}.brand-col{padding:14px;gap:13px;border-radius:14px;margin-top:12px;align-items:flex-start}.profile-ring{width:95px!important;height:95px!important;border-radius:13px!important}.profile{border-radius:13px!important}.social-row{gap:4px}.social-icon{width:28px;height:28px}.social-icon svg{width:14px;height:14px}.biz-name{font-size:1.2rem}.tagline{font-size:.78rem;line-height:1.35}.hours{font-size:.72rem}.identity{padding:18px 14px 0}.sticky-nav{margin-bottom:24px;padding:12px 10px;border-radius:13px}.cat-btn{min-width:84px;padding:9px 10px}.cat-btn .cat-icon{min-width:46px;height:46px;font-size:1.6rem}.cat-btn .cat-icon.has-img{width:46px}.cat-btn .cat-label{font-size:.68rem}.grid{gap:12px}.card-body{padding:11px;gap:5px}.card-title{font-size:.86rem}.card-price{font-size:1.05rem}.section-head h2{font-size:1.45rem}}
+
+/* Mejora de fotografías de productos: imagen completa sin recortes */
+.card-media-slider{background:#f7f9fc}
+.card-slide{background-size:contain !important;background-repeat:no-repeat !important;background-position:center center !important;background-color:#f7f9fc !important;cursor:zoom-in;min-height:170px}
+.edit-mode .card-slide{cursor:pointer}
+.card-slide:hover{background-color:#edf3fa !important}
+.thumb{background-size:contain !important;background-repeat:no-repeat !important;background-color:#f7f9fc}
+/* Visor de fotos más amplio, también en celulares */
+.lightbox-box{max-width:min(960px,96vw) !important;width:96vw !important;max-height:96dvh !important;padding:18px !important}
+.lightbox-img-wrap{height:min(75dvh,760px) !important;background:#f7f9fc !important}
+.lightbox-img{background-size:contain !important;background-position:center !important;background-repeat:no-repeat !important}
+@media(max-width:640px){.lightbox-box{width:100% !important;max-width:100% !important;padding:12px !important}.lightbox-img-wrap{height:min(68dvh,650px) !important}.card-slide{min-height:145px}}
+
+.store-hero-banner{
+  display:grid; grid-template-columns:minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items:center; gap:28px;
+}
+.store-hero-christmas{
+  justify-self:center; text-align:center; color:#ffe2a3; line-height:1;
+  font-family:'Baloo 2',sans-serif; font-size:clamp(2.25rem,5vw,4.75rem);
+}
+.store-hero-christmas span{display:block; margin-bottom:8px; font-size:.7em;}
+@media(max-width:640px){
+  .store-hero-banner{grid-template-columns:1fr; gap:18px;}
+  .store-hero-christmas{justify-self:start; display:flex; align-items:center; gap:8px; font-size:1.65rem;}
+  .store-hero-christmas span{margin:0;}
+}
+.store-hero-details{
+  display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;
+  font-size:.85rem; font-weight:700;
+}
+.store-hero-details .hero-detail{
+  display:inline-flex; align-items:center; gap:7px; margin:0; padding:6px 10px;
+  border:1px solid rgba(255,255,255,.28); border-radius:999px;
+  background:#163c62; color:#fff; line-height:1.25; text-shadow:none;
+}
+.store-hero-details a.hero-detail:hover{background:#235680;}
+.hero-detail-icon{
+  display:grid; place-items:center; flex:none; width:23px; height:23px;
+  border-radius:50%; background:#f9bd63;
+}
+.hero-detail-icon svg{width:18px; height:18px;}
+.hero-detail-icon.whatsapp{background:#087b42;}
+.hero-detail-icon.facebook{background:#0866ff;}
+
+/* Redes sociales debajo del perfil */
+.profile-wrap .social-icon{
+  width:38px; height:38px; border:1px solid transparent;
+  box-shadow:0 2px 5px rgba(17,47,81,.2);
+}
+.profile-wrap .social-icon.instagram{background:#a81960;}
+.profile-wrap .social-icon.facebook{background:#0757c5;}
+.profile-wrap .social-icon.tiktok{background:#191b25;}
+.profile-wrap .social-icon svg{width:22px; height:22px;}
+.profile-wrap .social-icon:hover{filter:brightness(.85);}
+.profile-wrap .social-icon:focus-visible{outline:2px solid #112f51; outline-offset:2px;}
+.edit-mode .profile-wrap .social-icon.empty{opacity:1; border:1px dashed #fff;}
+@media(max-width:640px){
+  .profile-wrap .social-icon{width:32px; height:32px;}
+  .profile-wrap .social-icon svg{width:20px; height:20px;}
+}
 </style>
 </head>
 <body>
-<div class="splash-screen" id="splashScreen">
+<div class="splash-screen" id="splashScreen" style="display:none">
   <div class="splash-logo-ring" id="splashLogoRing" style="display:none">
     <div class="splash-logo" id="splashLogo"><span class="splash-logo-fallback" id="splashLogoFallback" style="display:none"></span></div>
   </div>
@@ -938,7 +1036,22 @@
   <span class="fs-ico">⛶</span><span class="fs-txt">Pantalla completa</span>
 </button>
 
-<div id="app"></div>
+<div class="store-announcement">🎊 DECORACIÓN Y ARTÍCULOS PARA FIESTAS · VENTAS AL POR MAYOR Y MENOR</div>
+<header class="store-topbar">
+  <a href="#app" class="store-mark"><span class="store-mark-symbol">🎈</span><span><strong>Decorativos y +</strong><small>Importaciones Román Brandy</small></span></a>
+  <nav class="store-toplinks" aria-label="Navegación principal"><a href="#catalogo">Productos</a><a href="#categorias">Categorías</a><a class="top-cta" href="#catalogo">Ver catálogo</a></nav>
+</header>
+<section class="store-hero-banner" aria-label="Promoción principal"><div class="store-hero-copy"><span class="store-eyebrow">IMPORTACIONES · PIÑATERÍA · FIESTAS</span><h2>¡Todo para hacer tu fiesta inolvidable!</h2><p>Descubre nuestro catálogo de decoración y artículos para celebraciones. Consulta nuestros precios y compra por WhatsApp.</p><a href="#catalogo">Explorar productos →</a>
+  <div class="store-hero-details">
+    <span class="hero-detail"><span class="hero-detail-icon" aria-hidden="true">🚚</span>Envíos a todo el Perú</span>
+    <a class="hero-detail" href="https://wa.me/51929813961" target="_blank" rel="noopener" aria-label="WhatsApp 929813961"><span class="hero-detail-icon whatsapp"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.6 13.8L3 21l4.3-1.4A9 9 0 1 0 12 3Z" stroke="white" stroke-width="1.6"/><path d="M8.5 8.7c.2-.6.5-.6.8-.6h.6c.2 0 .4 0 .6.4.2.5.7 1.6.7 1.8.1.1.1.3 0 .4-.1.2-.2.3-.3.4-.1.1-.3.3-.1.6.2.3.8 1.2 1.6 1.9 1.1 1 2 1.2 2.3 1.4.3.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.4.2.5.3.1.2.1.9-.2 1.4-.3.6-1.5 1.2-2.1 1.2-.6 0-1.4.1-3.6-.9-2.7-1.2-4.4-4-4.6-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.3Z" fill="white"/></svg></span>929 813 961</a>
+    <span class="hero-detail" aria-label="Facebook Full fiessta"><span class="hero-detail-icon facebook"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M14 8.5h2V5.3h-2c-2 0-3.4 1.4-3.4 3.6v1.7H8.5v3h2.1V21h3v-7.4h2.1l.4-3h-2.5v-1.4c0-.6.2-1.2 1-1.2Z" fill="white"/></svg></span>Full fiessta</span>
+  </div>
+</div>
+  <div class="store-hero-christmas"><span aria-hidden="true">🎄</span><strong>¡Feliz Navidad!</strong></div>
+</section>
+<div class="store-benefits"><div class="store-benefit"><span>🎈</span>Variedad para tus celebraciones</div><div class="store-benefit"><span>📦</span>Atención para compras al por mayor</div><div class="store-benefit"><span>💬</span>Pedidos y consultas por WhatsApp</div></div>
+<div id="app"><div class="identity" style="padding:32px 24px"><h1>Decorativos y +</h1><p>Importaciones Román Brandy</p><p role="status">Cargando catálogo…</p></div></div>
 
 <div class="config-banner" id="configBanner">
   ⚠️ Firebase no está configurado todavía. Reemplaza el objeto <code>firebaseConfig</code> al inicio del &lt;script&gt; con los datos de tu proyecto de Firebase para que los productos se guarden en la nube y se vean para todo el público.
@@ -1002,7 +1115,15 @@ const firebaseConfig = {
 const FIREBASE_CONFIGURED = firebaseConfig.apiKey !== "TU_API_KEY";
 
 let db = null, settingsRef = null, productsRef = null;
-if(FIREBASE_CONFIGURED){
+async function connectFirebase(){
+  if(!FIREBASE_CONFIGURED) return;
+  for(const name of ['firebase-app-compat','firebase-firestore-compat']){
+    await new Promise((resolve,reject)=>{
+      const script=document.createElement('script');
+      script.src=`https://www.gstatic.com/firebasejs/10.12.2/${name}.js`;
+      script.onload=resolve; script.onerror=reject; document.head.appendChild(script);
+    });
+  }
   firebase.initializeApp(firebaseConfig);
   db = firebase.firestore();
   settingsRef = db.collection('storeConfig').doc('settings');
@@ -1021,7 +1142,8 @@ const DEFAULT_CATEGORIES = [
 
 const CATEGORY_PALETTE = ['#4C5FD5','#12A883','#FF9130','#E23FA0','#6B7280','#0EA5E9','#EF4444','#8B5CF6','#22C55E','#F59E0B'];
 
-let store = defaultData(); 
+let store = defaultData();
+if(FIREBASE_CONFIGURED) store.products = []; 
 
 let editMode = false;
 let activeFilter = 'todos';
@@ -1029,6 +1151,10 @@ let activeSubFilter = 'todos';
 let searchTerm = '';
 let pendingUpload = null; 
 let storeLoaded = false;
+let productsLoaded = false;
+let catalogError = false;
+let visibleLimit = 24;
+let imageObserver = null;
 let saveTimer = null;
 let footerClicks = 0;
 let clickTimer = null;
@@ -1128,7 +1254,6 @@ function defaultData(){
   return {
     businessName: 'SHOPii tu tienda online',
     tagline: 'Todo lo que buscas, en un solo lugar: tecnología, salud, juguetes y ropa.',
-    coverImages: [],
     profileImage: '',
     whatsappNumber: '50688888888',
     whatsappNumber2: '',
@@ -1184,45 +1309,39 @@ async function initRealtimeSync(){
     store = defaultData();
     ensureCategories();
     storeLoaded = true;
+    productsLoaded = true;
     render();
     return;
   }
 
-  try{
-    const settingsSnap = await settingsRef.get();
-    if(!settingsSnap.exists){
-      const seed = defaultData();
-      const { products, ...settings } = seed;
-      await settingsRef.set(settings);
-      const batch = db.batch();
-      products.forEach((p, i)=>{
-        const { id, ...data } = p;
-        batch.set(productsRef.doc(id), { ...data, order: i });
-      });
-      await batch.commit();
-    }
-  }catch(e){
-    console.error('No se pudo inicializar Firestore:', e);
-  }
-
+  // Ajustes y catálogo independientes; no se escriben datos de ejemplo al visitar.
   settingsRef.onSnapshot(snap=>{
     if(snap.exists){
       Object.assign(store, snap.data());
       storeLoaded = true;
       ensureCategories();
       render();
+    } else if(!snap.metadata.fromCache){
+      document.getElementById('app').textContent = 'No se encontró la configuración de la tienda.';
     }
-  }, err=>console.error('Error escuchando ajustes:', err));
+  }, err=>{ console.error('Error de ajustes:',err); if(!storeLoaded) showCatalogError(); });
 
-  productsRef.orderBy('order').onSnapshot(snap=>{
-    store.products = snap.docs.map(d=>normalizeProduct({ id:d.id, ...d.data() }));
-    render();
-  }, err=>{
-    productsRef.onSnapshot(snap=>{
-      store.products = snap.docs.map(d=>normalizeProduct({ id:d.id, ...d.data() }));
-      render();
-    });
+  const query = productsRef.orderBy('order');
+  const accept = (snap, complete)=>{
+    store.products = snap.docs.map(d=>normalizeProduct({id:d.id,...d.data()}));
+    if(complete){ productsLoaded = !snap.metadata.fromCache; catalogError=false; }
+    if(storeLoaded) render();
+  };
+  const full = ()=>query.onSnapshot(snap=>accept(snap,true),err=>{
+    productsRef.onSnapshot(snap=>accept(snap,true),showCatalogError);
   });
+  // Primer bloque pequeño; luego se conserva la sincronización completa original.
+  try{
+    const first = await query.limit(12).get({source:'server'});
+    accept(first,false);
+  }catch(e){ console.warn('Vista inicial no disponible:',e); }
+  full();
+
 }
 
 function showSavedPill(){
@@ -1238,7 +1357,7 @@ function showSaveError(){
   pill.classList.add('show');
 }
 
-function resizeImage(file, maxWidth, quality=0.75, format='image/jpeg'){
+function resizeImage(file, maxWidth, quality=0.75, format='image/webp'){
   return new Promise((resolve,reject)=>{
     if (file.type === 'image/gif') {
       const reader = new FileReader();
@@ -1480,26 +1599,9 @@ function tpl(){
 
   document.title = store.businessName || 'SHOPii tu tienda online';
 
-  const coverImgs = getCoverImages();
-  if(coverIndex >= coverImgs.length) coverIndex = 0;
-  const activeCover = coverImgs[coverIndex] || '';
-
-  const coverThumbs = coverImgs.map((src,i)=>`
-    <div class="thumb filled ${i===coverIndex?'active':''}" data-action="upload-cover-image" data-index="${i}" style="background-image:url(${src})">
-      ${editMode ? `<button class="thumb-remove" data-action="remove-cover-image" data-index="${i}" title="Quitar">✕</button>` : ''}
-    </div>
-  `).join('') + (editMode ? `<div class="thumb add-thumb" data-action="add-cover-image"><span class="thumb-plus">+</span></div>` : '');
-
   return `
   <div class="hero">
     <div class="hero-top">
-      <div class="cover-wrap">
-        <div class="cover" data-action="upload-cover-image" data-index="${coverIndex}" style="${activeCover ? `background-image:url(${activeCover})` : ''}">
-          ${!activeCover ? `<span class="media-placeholder">Banner informativo: sube aquí tu aviso u oferta (Imagen o GIF)</span>` : ''}
-          <div class="cover-hint">${coverImgs.length ? 'Cambiar esta imagen/GIF' : 'Agregar oferta'}</div>
-        </div>
-        ${editMode ? `<div class="gallery-strip cover-gallery">${coverThumbs}</div>` : ''}
-      </div>
       <div class="brand-col">
         <div class="profile-wrap">
           <div class="profile-ring">
@@ -1509,9 +1611,9 @@ function tpl(){
             </div>
           </div>
           <div class="social-row">
-            ${(editMode || store.socialInstagram) ? `<a class="social-icon ${!store.socialInstagram ? 'empty' : ''}" href="${store.socialInstagram || '#'}" ${editMode ? `data-action="edit-social" data-key="socialInstagram"` : ''} target="_blank" rel="noopener" title="Instagram">${igIcon()}</a>` : ''}
-            ${(editMode || store.socialFacebook) ? `<a class="social-icon ${!store.socialFacebook ? 'empty' : ''}" href="${store.socialFacebook || '#'}" ${editMode ? `data-action="edit-social" data-key="socialFacebook"` : ''} target="_blank" rel="noopener" title="Facebook">${fbIcon()}</a>` : ''}
-            ${(editMode || store.socialTiktok) ? `<a class="social-icon ${!store.socialTiktok ? 'empty' : ''}" href="${store.socialTiktok || '#'}" ${editMode ? `data-action="edit-social" data-key="socialTiktok"` : ''} target="_blank" rel="noopener" title="TikTok">${ttIcon()}</a>` : ''}
+            ${(editMode || store.socialInstagram) ? `<a class="social-icon instagram ${!store.socialInstagram ? 'empty' : ''}" href="${store.socialInstagram || '#'}" ${editMode ? `data-action="edit-social" data-key="socialInstagram"` : ''} target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">${igIcon()}</a>` : ''}
+            ${(editMode || store.socialFacebook) ? `<a class="social-icon facebook ${!store.socialFacebook ? 'empty' : ''}" href="${store.socialFacebook || '#'}" ${editMode ? `data-action="edit-social" data-key="socialFacebook"` : ''} target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">${fbIcon()}</a>` : ''}
+            ${(editMode || store.socialTiktok) ? `<a class="social-icon tiktok ${!store.socialTiktok ? 'empty' : ''}" href="${store.socialTiktok || '#'}" ${editMode ? `data-action="edit-social" data-key="socialTiktok"` : ''} target="_blank" rel="noopener" title="TikTok" aria-label="TikTok">${ttIcon()}</a>` : ''}
           </div>
         </div>
         <div class="brand-text">
@@ -1546,7 +1648,7 @@ function tpl(){
         </div>
       </div>
 
-      <div class="sticky-nav">
+      <div class="sticky-nav" id="categorias">
       <div class="search-wrap">
         <span class="search-icon">🔍</span>
         <input type="text" id="searchInput" class="search-input" placeholder="Buscar producto..." value="${escapeAttr(searchTerm)}" oninput="handleSearchInput(this)">
@@ -1617,7 +1719,7 @@ function tpl(){
 
       ${term ? `<p class="gallery-hint" style="margin-top:-18px; margin-bottom:24px;">🔍 ${filtered.length} resultado${filtered.length===1?'':'s'} para "${searchTerm.trim()}"</p>` : ''}
 
-      <div class="section-head">
+      <div class="section-head" id="catalogo">
         <span class="dot"></span>
         <h2>Nuestros productos</h2>
         <div class="size-ctl">
@@ -1627,10 +1729,12 @@ function tpl(){
       </div>
 
       <div class="grid" data-size="${getCardSize()}">
-        ${filtered.length ? filtered.map(p=>cardTpl(p)).join('') : `<div class="empty glass" style="border-radius:20px;">${term ? `No encontramos productos que coincidan con "${searchTerm.trim()}".` : 'Todavía no hay productos en esta categoría.'}</div>`}
+        ${filtered.length ? (editMode ? filtered : filtered.slice(0,visibleLimit)).map(p=>cardTpl(p)).join('') : `<div class="empty glass" style="border-radius:20px;">${!productsLoaded ? (catalogError ? 'No se pudo cargar el catálogo. Recarga la página.' : 'Cargando productos…') : term ? `No encontramos productos que coincidan con "${searchTerm.trim()}".` : 'Todavía no hay productos en esta categoría.'}</div>`}
         <button class="add-card" data-action="add-product">+ Agregar producto</button>
       </div>
 
+      ${!editMode && filtered.length > visibleLimit ? `<div style="text-align:center;margin:-35px 0 24px"><button class="toolbar-btn" style="margin:auto" data-action="more-products">Ver más productos (${filtered.length-visibleLimit})</button></div>` : ''}
+      ${!productsLoaded && filtered.length ? '<p role="status" style="text-align:center">Cargando el resto del catálogo…</p>' : ''}
       <footer>${store.businessName} · 2026</footer>
     </div>
   </div>
@@ -1651,7 +1755,7 @@ function cardTpl(p){
 
       galleryHtml += `
         <div class="card-slide ${editMode ? 'edit-clickable' : ''}" 
-             style="${v.image ? `background-image:url(${v.image})` : ''}"
+             ${v.image ? 'data-lazy-photo="1"' : ''}
              data-action="${sAction}" data-id="${p.id}" data-index="${index}">
              
           ${!v.image ? '<span class="media-placeholder">Sin imagen</span>' : ''}
@@ -1675,14 +1779,14 @@ function cardTpl(p){
   }
   galleryHtml += '</div>';
 
-  const thumbs = p.variations.map((v, i)=>`
+  const thumbs = editMode ? p.variations.map((v, i)=>`
     <div class="thumb filled ${i===mainIndex ? 'active' : ''}"
          data-action="select-product-image"
          data-id="${p.id}" data-index="${i}"
          style="background-image:url(${v.image})">
       ${editMode && p.variations.length > 1 ? `<button class="thumb-remove" data-action="remove-product-image" data-id="${p.id}" data-index="${i}" title="Quitar">✕</button>` : ''}
     </div>
-  `).join('') + (editMode ? `<div class="thumb add-thumb" data-action="add-product-image" data-id="${p.id}"><span class="thumb-plus">+</span></div>` : '');
+  `).join('') + (editMode ? `<div class="thumb add-thumb" data-action="add-product-image" data-id="${p.id}"><span class="thumb-plus">+</span></div>` : '') : '';
 
   const pSubCat = (p.subCategory && p.subCategory !== 'todos') ? getSubCategory(p.category, p.subCategory) : null;
   const subText = pSubCat ? ` · ${pSubCat.name}` : '';
@@ -1801,6 +1905,24 @@ window.addEventListener('click', (e)=>{
 }, true);
 window.addEventListener('resize', updateCatNav);
 
+function showCatalogError(err){
+  console.error('Error de catálogo:',err); catalogError=true;
+  if(storeLoaded) render();
+  else document.getElementById('app').innerHTML='<p role="alert" style="padding:24px">No se pudo conectar con la tienda. <button onclick="location.reload()">Reintentar</button></p>';
+}
+function attachLazyPhotos(){
+  if(imageObserver) imageObserver.disconnect();
+  const load = el=>{
+    const v=getProduct(el.dataset.id)?.variations[Number(el.dataset.index)];
+    if(v?.image) el.style.backgroundImage=`url("${v.image}")`;
+  };
+  const nodes=document.querySelectorAll('[data-lazy-photo]');
+  if(!('IntersectionObserver' in window)){nodes.forEach(load);return;}
+  imageObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{if(entry.isIntersecting){load(entry.target);imageObserver.unobserve(entry.target);}});
+  },{rootMargin:'350px 0px'});
+  nodes.forEach(el=>imageObserver.observe(el));
+}
 function render(){
   const catBarEl = document.getElementById('catBar');
   const catBarScroll = catBarEl ? catBarEl.scrollLeft : 0;
@@ -1811,6 +1933,7 @@ function render(){
   updateSplashLogo();
   const newCatBarEl = document.getElementById('catBar');
   if(newCatBarEl) newCatBarEl.scrollLeft = catBarScroll;
+  attachLazyPhotos();
   attachCardSliderListeners();
   attachCatBarDrag();
 }
@@ -1930,6 +2053,7 @@ function hideSplash(){
 
 function handleSearchInput(el){
   searchTerm = el.value;
+  visibleLimit=24;
   const cursorPos = el.selectionStart;
   render();
   const newEl = document.getElementById('searchInput');
@@ -1940,31 +2064,6 @@ function handleSearchInput(el){
 }
 
 function getProduct(id){ return store.products.find(p=>p.id===id); }
-
-let coverIndex = 0;
-let coverTimer = null;
-
-function getCoverImages(){
-  if(!Array.isArray(store.coverImages)) store.coverImages = [];
-  return store.coverImages;
-}
-
-function startCoverRotation(){
-  clearInterval(coverTimer);
-  coverTimer = setInterval(()=>{
-    const imgs = getCoverImages();
-    if(imgs.length <= 1) return;
-    coverIndex = (coverIndex + 1) % imgs.length;
-    updateCoverDisplay();
-  }, 4500);
-}
-
-function updateCoverDisplay(){
-  const imgs = getCoverImages();
-  if(coverIndex >= imgs.length) coverIndex = 0;
-  const el = document.querySelector('.cover');
-  if(el) el.style.backgroundImage = imgs[coverIndex] ? `url(${imgs[coverIndex]})` : 'none';
-}
 
 let modalOnConfirm = null;
 
@@ -2130,6 +2229,7 @@ document.addEventListener('click', async (e)=>{
       
       if(footerClicks >= 3){
         footerClicks = 0;
+        if(!storeLoaded || !productsLoaded){ alert('Espera a que termine de sincronizarse el catálogo antes de editar.'); return; }
         askForPin('Acceso administrativo (PIN)');
       }
     }
@@ -2139,6 +2239,8 @@ document.addEventListener('click', async (e)=>{
   if(!el) return;
   if(el.tagName === 'A') e.preventDefault();
   const action = el.dataset.action;
+  if(action === 'more-products'){ visibleLimit+=24; render(); return; }
+  if(action === 'filter' || action === 'sub-filter') visibleLimit=24;
 
   if((action === 'filter' || action === 'sub-filter') && editMode && e.target.closest('[contenteditable="true"]')){
     return;
@@ -2383,26 +2485,6 @@ document.addEventListener('click', async (e)=>{
     if(newEl) newEl.focus();
   }
 
-  if(action === 'upload-cover-image' && editMode){
-    pendingUpload = {type:'cover-image', index: Number(el.dataset.index)};
-    document.getElementById('fileInput').click();
-  }
-
-  if(action === 'add-cover-image' && editMode){
-    pendingUpload = {type:'cover-image-add'};
-    document.getElementById('fileInput').click();
-  }
-
-  if(action === 'remove-cover-image' && editMode){
-    if(!FIREBASE_CONFIGURED) return;
-    const imgs = getCoverImages();
-    imgs.splice(Number(el.dataset.index), 1);
-    store.coverImages = imgs;
-    if(coverIndex >= imgs.length) coverIndex = 0;
-    settingsRef.set({coverImages: imgs}, {merge:true}).then(showSavedPill).catch(showSaveError);
-    render();
-  }
-
   if(action === 'upload-profile' && editMode){
     pendingUpload = {type:'profile'};
     document.getElementById('fileInput').click();
@@ -2589,23 +2671,11 @@ document.getElementById('fileInput').addEventListener('change', async (e)=>{
   if(!file || !pendingUpload || !FIREBASE_CONFIGURED) return;
   try{
     let dataUrl;
-    if(pendingUpload.type.startsWith('cover')) dataUrl = await resizeImage(file, 1000, 0.75);
-    else if(pendingUpload.type === 'profile') dataUrl = await resizeImage(file, 640, 0.85);
+    if(pendingUpload.type === 'profile') dataUrl = await resizeImage(file, 640, 0.85);
     else if(pendingUpload.type === 'cat-icon') dataUrl = await resizeImage(file, 200, 0.9, 'image/png');
     else dataUrl = await resizeImage(file, 600, 0.7);
 
-    if(pendingUpload.type === 'cover-image'){
-      const imgs = getCoverImages();
-      imgs[pendingUpload.index] = dataUrl;
-      store.coverImages = imgs;
-      await settingsRef.set({coverImages: imgs}, {merge:true});
-    } else if(pendingUpload.type === 'cover-image-add'){
-      const imgs = getCoverImages();
-      imgs.push(dataUrl);
-      store.coverImages = imgs;
-      coverIndex = imgs.length - 1;
-      await settingsRef.set({coverImages: imgs}, {merge:true});
-    } else if(pendingUpload.type === 'cat-icon'){
+    if(pendingUpload.type === 'cat-icon'){
       await saveCatIcon(pendingUpload.key, dataUrl);
     } else if(pendingUpload.type === 'profile'){
       store.profileImage = dataUrl;
@@ -2637,17 +2707,7 @@ document.getElementById('fileInput').addEventListener('change', async (e)=>{
   pendingUpload = null;
 });
 
-initRealtimeSync();
-startCoverRotation();
-updateSplashLogo();
-(function(){
-  const t0 = Date.now();
-  const iv = setInterval(()=>{
-    const el = Date.now() - t0;
-    if((storeLoaded && el >= 1500) || el >= 4500){ clearInterval(iv); hideSplash(); }
-  }, 100);
-})();
-document.getElementById('splashScreen').addEventListener('click', hideSplash);
+connectFirebase().then(initRealtimeSync).catch(showCatalogError);
 </script>
 </body>
 </html>
